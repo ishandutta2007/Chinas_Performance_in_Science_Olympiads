@@ -1,34 +1,34 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Historical IOI Data for India (2003 - 2025)
-# Format: (Year, India's Unofficial Team Rank, Total Participating Countries)
+# Historical IOI Data for China (2003 - 2025)
+# Format: (Year, China's Unofficial Team Rank, Total Participating Countries)
 # Source: stats.ioinformatics.org (unofficial team rank computed from sum of
-# individual scores). India first participated in IOI 2003.
+# individual scores). China first participated in IOI 2003.
 ioi_data = [
-    (2003, 29, 69),
-    (2004, 27, 81),
-    (2005, 15, 72),
-    (2006, 27, 74),
-    (2007, 28, 77),
-    (2008, 32, 78),
-    (2009, 24, 78),
-    (2010, 18, 80),
-    (2011, 36, 78),
-    (2012, 51, 81),
-    (2013, 25, 77),
-    (2014, 21, 81),
-    (2015, 24, 83),
-    (2016, 18, 80),
-    (2017, 30, 83),
-    (2018, 70, 87),
-    (2019, 33, 87),
-    (2020, 19, 87),
-    (2021, 20, 88),
-    (2022, 20, 88),
-    (2023, 11, 87),
-    (2024, 13, 91),
-    (2025, 29, 84),
+    (2003, 1, 69),
+    (2004, 1, 81),
+    (2005, 1, 72),
+    (2006, 1, 74),
+    (2007, 1, 77),
+    (2008, 1, 78),
+    (2009, 1, 78),
+    (2010, 1, 80),
+    (2011, 1, 78),
+    (2012, 1, 81),
+    (2013, 1, 77),
+    (2014, 1, 81),
+    (2015, 1, 83),
+    (2016, 1, 80),
+    (2017, 1, 83),
+    (2018, 1, 87),
+    (2019, 1, 87),
+    (2020, 1, 87),
+    (2021, 1, 88),
+    (2022, 1, 88),
+    (2023, 1, 87),
+    (2024, 1, 91),
+    (2025, 1, 84),
 ]
 
 
@@ -51,7 +51,7 @@ plt.plot(
     linewidth=2,
     markersize=5,
     alpha=0.8,
-    label="India's Performance Percentile",
+    label="China's Performance Percentile",
 )
 
 # Annotate every individual data point with its Rank / Total Countries string
@@ -112,7 +112,7 @@ plt.annotate(
 
 # Plot customization
 plt.title(
-    f"India's IOI Performance Percentile ({ioi_data[0][0]} - {ioi_data[-1][0]})\nRelative Positioning to Overall Pool Size",
+    f"China's IOI Performance Percentile ({ioi_data[0][0]} - {ioi_data[-1][0]})\nRelative Positioning to Overall Pool Size",
     fontsize=16,
     fontweight="bold",
     pad=15,
@@ -138,5 +138,6 @@ plt.legend(loc="lower left", fontsize=11)
 # )
 
 plt.tight_layout()
-plt.savefig("assets/india_ioi_percentile.png")
+plt.savefig("assets/China_ioi_percentile.png")
 plt.show()
+

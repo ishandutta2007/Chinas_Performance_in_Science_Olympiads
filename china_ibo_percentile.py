@@ -1,40 +1,40 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Historical IChO Data for India (1999 - 2026)
-# Format: (Year, India's Unofficial Team Rank, Total Participating Countries)
-icho_data = [
-    (1999, 21, 51),
-    (2000, 10, 53),
-    (2001, 7, 54),
-    (2002, 10, 57),
-    (2003, 5, 59),
-    (2004, 15, 61),
-    (2005, 14, 59),
-    (2006, 17, 66),
-    (2007, 14, 66),
-    (2008, 17, 66),
-    (2009, 11, 64),
-    (2010, 22, 68),
-    (2011, 15, 70),
-    (2012, 6, 71),
-    (2013, 11, 73),
-    (2014, 11, 75),
-    (2015, 17, 75),
-    (2016, 21, 68),
-    (2017, 18, 76),
-    (2018, 14, 76),
-    (2019, 10, 80),
-    (2021, 12, 79),
-    (2022, 16, 84),
-    (2023, 12, 89),
-    (2024, 19, 84),
-    (2025, 6, 91),
-    (2026, 1, 93),
+# Historical IBO Data for China (2000 - 2026)
+# Format: (Year, China's Unofficial Team Rank, Total Participating Countries)
+ibo_data = [
+    (2000, 1, 38),
+    (2001, 1, 38),
+    (2002, 1, 40),
+    (2003, 1, 45),
+    (2004, 1, 48),
+    (2005, 1, 50),
+    (2006, 1, 55),
+    (2007, 1, 49),
+    (2008, 1, 55),
+    (2009, 1, 56),
+    (2010, 1, 60),
+    (2011, 1, 58),
+    (2012, 1, 59),
+    (2013, 1, 62),
+    (2014, 1, 61),
+    (2015, 1, 61),
+    (2016, 1, 68),
+    (2017, 1, 64),
+    (2018, 1, 68),
+    (2019, 1, 73),
+    (2021, 1, 76),
+    (2022, 1, 65),
+    (2023, 1, 76),
+    (2024, 1, 73),
+    (2025, 1, 75),
+    (2026, 1, 78),
 ]
 
+
 # Create DataFrame
-df = pd.DataFrame(icho_data, columns=["Year", "Rank", "Total_Countries"])
+df = pd.DataFrame(ibo_data, columns=["Year", "Rank", "Total_Countries"])
 
 # Calculate the competitive percentile (Higher is better, 100% = 1st place)
 df["Percentile"] = (1 - (df["Rank"] - 1) / df["Total_Countries"]) * 100
@@ -52,7 +52,7 @@ plt.plot(
     linewidth=2,
     markersize=5,
     alpha=0.8,
-    label="India's Performance Percentile",
+    label="China's Performance Percentile",
 )
 
 # Annotate every individual data point with its Rank / Total Countries string
@@ -95,12 +95,12 @@ plt.scatter(
     label="Top 10 Finishes",
 )
 
-# Specifically label the all-time high water mark (2026)
-best_2026 = df[df["Year"] == 2026].iloc[0]
+# Specifically label the all-time high water mark (2023)
+best_2023 = df[df["Year"] == 2023].iloc[0]
 plt.annotate(
-    f"🏆 Historic Peak!\nRank {int(best_2026['Rank'])} of {int(best_2026['Total_Countries'])}\n({best_2026['Percentile']:.0f}th Percentile)",
-    xy=(2026, best_2026["Percentile"]),
-    xytext=(2021, best_2026["Percentile"] - 6),
+    f"🏆 Historic Peak!\nRank {int(best_2023['Rank'])} of {int(best_2023['Total_Countries'])}\n({best_2023['Percentile']:.1f}th Percentile)",
+    xy=(2023, best_2023["Percentile"]),
+    xytext=(2018, best_2023["Percentile"] - 6),
     arrowprops=dict(
         facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
     ),
@@ -113,14 +113,14 @@ plt.annotate(
 
 # Plot customization
 plt.title(
-    f"India's IChO Performance Percentile ({icho_data[0][0]} - {icho_data[-1][0]})\nRelative Positioning to Overall Pool Size",
+    f"China's IBO Performance Percentile ({ibo_data[0][0]} - {ibo_data[-1][0]})\nRelative Positioning to Overall Pool Size",
     fontsize=16,
     fontweight="bold",
     pad=15,
 )
 plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
-plt.xlim(icho_data[0][0] - 1, icho_data[-1][0] + 1)
+plt.xlim(ibo_data[0][0] - 1, ibo_data[-1][0] + 1)
 plt.ylim(minpct - 6, 103)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
@@ -138,5 +138,6 @@ plt.text(
 )
 
 plt.tight_layout()
-plt.savefig("assets/india_icho_percentile.png")
+plt.savefig("assets/China_ibo_percentile.png")
 plt.show()
+
