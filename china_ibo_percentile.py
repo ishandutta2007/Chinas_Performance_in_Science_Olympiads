@@ -100,7 +100,7 @@ best_2023 = df[df["Year"] == 2023].iloc[0]
 plt.annotate(
     f"🏆 Historic Peak!\nRank {int(best_2023['Rank'])} of {int(best_2023['Total_Countries'])}\n({best_2023['Percentile']:.1f}th Percentile)",
     xy=(2023, best_2023["Percentile"]),
-    xytext=(2018, best_2023["Percentile"] - 6),
+    xytext=(2018, best_2023["Percentile"] - 0.8),
     arrowprops=dict(
         facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
     ),

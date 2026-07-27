@@ -103,7 +103,7 @@ best_2026 = df[df["Year"] == 2026].iloc[0]
 
 # 1. Anchor the text at a shared coordinate so both arrows originate from the exact same spot
 text_x = 2022
-text_y = best_2018["Percentile"] + 2
+text_y = best_2018["Percentile"] + 0.5
 
 # 2. Main Annotation (Contains the Text + Arrow pointing to 2018)
 plt.annotate(
