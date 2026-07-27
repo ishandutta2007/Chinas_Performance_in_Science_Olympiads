@@ -131,15 +131,26 @@ plt.title(
 plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
 plt.xlim(imo_data[0][0] - 1, imo_data[-1][0] + 1)
-plt.ylim(minpct - 0.5, 100.5)
+plt.ylim(minpct - 2.5, 103.5)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
 
+# Informative visual anchor for the 1998 gap
+plt.axvspan(1997.5, 1998.5, color="#ecf0f1", alpha=0.7, zorder=1)
+plt.text(
+    1998,
+    96,
+    "1998\nNo Participation",
+    color="#7f8c8d",
+    fontsize=9,
+    ha="center",
+    fontweight="bold",
+)
 # Informative visual anchor for the 2020 gap
 plt.axvspan(2019.5, 2020.5, color="#ecf0f1", alpha=0.7, zorder=1)
 plt.text(
     2020,
-    55,
+    96,
     "2020\nNo Participation",
     color="#7f8c8d",
     fontsize=9,
