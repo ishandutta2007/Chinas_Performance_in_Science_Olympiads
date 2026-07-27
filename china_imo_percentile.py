@@ -76,10 +76,10 @@ for i, row in df.iterrows():
     pct = row["Percentile"]
 
     # Toggle text positions slightly to avoid visual overlap
-    if pct > prepct:
-        yano = 8
+    if i % 2 == 0:
+        yano = 8 + 5*(5*(i%5))
     else:
-        yano = -14
+        yano = -14 - 5*(5*(i%5))
     xy_text_offset = (0, yano)  # if rank % 2 == 0 else (0, -14)
 
     plt.annotate(
@@ -132,7 +132,7 @@ plt.title(
 plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
 plt.xlim(imo_data[0][0] - 1, imo_data[-1][0] + 1)
-plt.ylim(minpct - 6, 103)
+plt.ylim(minpct - 1, 101)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
 
