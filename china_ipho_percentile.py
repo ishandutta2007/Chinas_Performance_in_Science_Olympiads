@@ -106,17 +106,17 @@ text_x = 2022
 text_y = best_2018["Percentile"] + 0.3
 
 # 2. Main Annotation (Contains the Text + Arrow pointing to 2018)
-plt.annotate(
-    f"🏆 Historic Peak!\nRank {int(best_2018['Rank'])} of {int(best_2018['Total_Countries'])}\n({best_2018['Percentile']:.0f}th Percentile)",
-    xy=(2018, best_2018["Percentile"]),
-    xytext=(text_x, text_y),
-    arrowprops=dict(color="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"),
-    fontsize=11,
-    fontweight="bold",
-    color="#e74c3c",
-    ha="center",
-    fontname="Segoe UI Emoji",
-)
+# plt.annotate(
+#     f"🏆 Historic Peak!\nRank {int(best_2018['Rank'])} of {int(best_2018['Total_Countries'])}\n({best_2018['Percentile']:.0f}th Percentile)",
+#     xy=(2018, best_2018["Percentile"]),
+#     xytext=(text_x, text_y),
+#     arrowprops=dict(color="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"),
+#     fontsize=11,
+#     fontweight="bold",
+#     color="#e74c3c",
+#     ha="center",
+#     fontname="Segoe UI Emoji",
+# )
 
 # 3. Ghost Annotation (Empty Text + Arrow pointing to 2026)
 plt.annotate(

@@ -95,20 +95,20 @@ plt.scatter(
 )
 
 # Specifically label the all-time high water mark (2023)
-best_year = df.loc[df["Percentile"].idxmax()]
-plt.annotate(
-    f"🏆 Historic Peak!\nRank {int(best_year['Rank'])} of {int(best_year['Total_Countries'])}\n({best_year['Percentile']:.1f}th Percentile)",
-    xy=(best_year["Year"], best_year["Percentile"]),
-    xytext=(best_year["Year"] + 2, best_year["Percentile"] - 0.3),
-    arrowprops=dict(
-        facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
-    ),
-    fontsize=11,
-    fontweight="bold",
-    color="#e74c3c",
-    ha="center",
-    fontname="Segoe UI Emoji",
-)
+# best_year = df.loc[df["Percentile"].idxmax()]
+# plt.annotate(
+#     f"🏆 Historic Peak!\nRank {int(best_year['Rank'])} of {int(best_year['Total_Countries'])}\n({best_year['Percentile']:.1f}th Percentile)",
+#     xy=(best_year["Year"], best_year["Percentile"]),
+#     xytext=(best_year["Year"] + 2, best_year["Percentile"] - 0.3),
+#     arrowprops=dict(
+#         facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
+#     ),
+#     fontsize=11,
+#     fontweight="bold",
+#     color="#e74c3c",
+#     ha="center",
+#     fontname="Segoe UI Emoji",
+# )
 
 # Plot customization
 plt.title(
