@@ -32,5 +32,4 @@ Discover insights, trends, and percentiles for Chinan students in globally recog
 
 ## 🌌 China in International Olympiad on Astronomy and Astrophysics (IOAA) Percentile
 ![China IOAA Percentile](assets/China_ioaa_percentile.png)
-# Chinas_Performance_in_Science_Olympiads
 
