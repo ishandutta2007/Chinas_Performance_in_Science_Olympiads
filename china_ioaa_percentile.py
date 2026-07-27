@@ -109,17 +109,17 @@ text_y = best_2016["Percentile"] + 0.1
 # )
 
 # 3. Ghost Annotation (Empty Text + Arrow pointing to 2025)
-plt.annotate(
-    "",  # An empty string prevents overlapping text rendering
-    xy=(2025, best_2025["Percentile"]),
-    xytext=(text_x + 1, text_y),
-    arrowprops=dict(
-        color="#e74c3c",
-        arrowstyle="->",
-        connectionstyle="arc3,rad=0.1",
-        # Note: Flipped the rad polarity to 0.1 so the arc bows in the opposite direction
-    ),
-)
+# plt.annotate(
+#     "",  # An empty string prevents overlapping text rendering
+#     xy=(2025, best_2025["Percentile"]),
+#     xytext=(text_x + 1, text_y),
+#     arrowprops=dict(
+#         color="#e74c3c",
+#         arrowstyle="->",
+#         connectionstyle="arc3,rad=0.1",
+#         # Note: Flipped the rad polarity to 0.1 so the arc bows in the opposite direction
+#     ),
+# )
 
 # Plot customization
 plt.title(
