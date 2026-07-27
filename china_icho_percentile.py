@@ -140,4 +140,3 @@ plt.text(
 plt.tight_layout()
 plt.savefig("assets/China_icho_percentile.png")
 plt.show()
-

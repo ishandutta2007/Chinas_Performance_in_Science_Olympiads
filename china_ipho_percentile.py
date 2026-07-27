@@ -160,4 +160,3 @@ plt.text(
 plt.tight_layout()
 plt.savefig("assets/China_ipho_percentile.png")
 plt.show()
-

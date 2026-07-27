@@ -140,4 +140,3 @@ plt.legend(loc="lower left", fontsize=11)
 plt.tight_layout()
 plt.savefig("assets/China_ioi_percentile.png")
 plt.show()
-

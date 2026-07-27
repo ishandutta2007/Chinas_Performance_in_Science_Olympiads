@@ -140,4 +140,3 @@ plt.text(
 plt.tight_layout()
 plt.savefig("assets/China_ibo_percentile.png")
 plt.show()
-

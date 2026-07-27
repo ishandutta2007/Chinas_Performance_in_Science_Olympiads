@@ -77,9 +77,9 @@ for i, row in df.iterrows():
 
     # Toggle text positions slightly to avoid visual overlap
     if i % 2 == 0:
-        yano = 8 + 5*(5*(i%5))
+        yano = 8 + 5 * (5 * (i % 5))
     else:
-        yano = -14 - 5*(5*(i%5))
+        yano = -14 - 5 * (5 * (i % 5))
     xy_text_offset = (0, yano)  # if rank % 2 == 0 else (0, -14)
 
     plt.annotate(
@@ -151,4 +151,3 @@ plt.text(
 plt.tight_layout()
 plt.savefig("assets/China_imo_percentile.png")
 plt.show()
-

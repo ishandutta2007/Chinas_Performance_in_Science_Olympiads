@@ -257,9 +257,9 @@ def plot_olympiad(name):
 
         # Toggle text positions slightly to avoid visual overlap
         if i % 2 == 0:
-            yano = 8 + 5*(i%5)
+            yano = 8 + 5 * (i % 5)
         else:
-            yano = -14 - 5*(i%5)
+            yano = -14 - 5 * (i % 5)
         xy_text_offset = (0, yano)
 
         plt.annotate(
@@ -415,4 +415,3 @@ if __name__ == "__main__":
             plot_olympiad(olym)
     else:
         plot_olympiad(args.olympiad)
-

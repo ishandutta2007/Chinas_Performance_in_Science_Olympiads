@@ -150,4 +150,3 @@ plt.text(
 plt.tight_layout()
 plt.savefig("assets/China_ioaa_percentile.png")
 plt.show()
-
