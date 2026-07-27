@@ -103,7 +103,7 @@ best_2026 = df[df["Year"] == 2026].iloc[0]
 
 # 1. Anchor the text at a shared coordinate so both arrows originate from the exact same spot
 text_x = 2022
-text_y = best_2018["Percentile"] + 0.5
+text_y = best_2018["Percentile"] + 0.3
 
 # 2. Main Annotation (Contains the Text + Arrow pointing to 2018)
 plt.annotate(
@@ -141,7 +141,7 @@ plt.title(
 plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
 plt.xlim(ipho_data[0][0] - 1, ipho_data[-1][0] + 1)
-plt.ylim(minpct - 1, 101)
+plt.ylim(minpct - 0.5, 100.5)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
 

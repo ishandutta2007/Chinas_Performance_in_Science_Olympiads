@@ -373,7 +373,7 @@ def plot_olympiad(name):
     )
 
     plt.xlim(data[0][0] - 1, data[-1][0] + 1)
-    plt.ylim(minpct - 1, 101)
+    plt.ylim(minpct - 0.5, 100.5)
     plt.grid(True, linestyle=":", alpha=0.6)
     plt.legend(loc="lower left", fontsize=11)
 

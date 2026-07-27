@@ -99,7 +99,7 @@ best_year = df.loc[df["Percentile"].idxmax()]
 plt.annotate(
     f"🏆 Historic Peak!\nRank {int(best_year['Rank'])} of {int(best_year['Total_Countries'])}\n({best_year['Percentile']:.1f}th Percentile)",
     xy=(best_year["Year"], best_year["Percentile"]),
-    xytext=(best_year["Year"] + 2, best_year["Percentile"] - 0.7),
+    xytext=(best_year["Year"] + 2, best_year["Percentile"] - 0.3),
     arrowprops=dict(
         facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
     ),
@@ -121,7 +121,7 @@ plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
 
 plt.xlim(ioi_data[0][0] - 1, ioi_data[-1][0] + 1)
-plt.ylim(minpct - 1, 101)
+plt.ylim(minpct - 0.5, 100.5)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
 

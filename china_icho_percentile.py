@@ -100,7 +100,7 @@ best_2026 = df[df["Year"] == 2026].iloc[0]
 plt.annotate(
     f"🏆 Historic Peak!\nRank {int(best_2026['Rank'])} of {int(best_2026['Total_Countries'])}\n({best_2026['Percentile']:.0f}th Percentile)",
     xy=(2026, best_2026["Percentile"]),
-    xytext=(2021, best_2026["Percentile"] - 0.6),
+    xytext=(2021, best_2026["Percentile"] - 0.3),
     arrowprops=dict(
         facecolor="#e74c3c", arrowstyle="->", connectionstyle="arc3,rad=-0.1"
     ),
@@ -121,7 +121,7 @@ plt.title(
 plt.xlabel("Year", fontsize=12, labelpad=10)
 plt.ylabel("Competitive Percentile (%) — Higher is Better", fontsize=12, labelpad=10)
 plt.xlim(icho_data[0][0] - 1, icho_data[-1][0] + 1)
-plt.ylim(minpct - 1, 101)
+plt.ylim(minpct - 0.5, 100.5)
 plt.grid(True, linestyle=":", alpha=0.6)
 plt.legend(loc="lower left", fontsize=11)
 
